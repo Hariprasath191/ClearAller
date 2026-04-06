@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --surface-1: 255 255 255;
+  --surface-2: 246 249 250;
+  --surface-3: 235 242 240;
+  --ink-1: 14 23 25;
+  --ink-2: 80 95 102;
+  --ring: 46 156 133;
+}
+
+.dark {
+  --surface-1: 12 16 18;
+  --surface-2: 16 22 25;
+  --surface-3: 24 33 37;
+  --ink-1: 238 245 247;
+  --ink-2: 165 182 190;
+  --ring: 74 167 255;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply bg-surface-1 text-ink-1 antialiased;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: rgb(46 156 133 / 0.25);
+}
+
+.dark ::selection {
+  background: rgb(74 167 255 / 0.25);
+}
