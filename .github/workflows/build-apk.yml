@@ -37,6 +37,10 @@ jobs:
         working-directory: ./clearaller-vision
         run: npx cap sync android
 
+      - name: Make gradlew executable
+        working-directory: ./clearaller-vision/android
+        run: chmod +x gradlew
+
       - name: Build APK with Gradle
         working-directory: ./clearaller-vision/android
         run: ./gradlew assembleDebug
